@@ -40,7 +40,8 @@ defmodule Continuum.StopWatch do
     end
   end
 
-  defrecordp :watch, start: nil
+  require Record
+  Record.defrecordp :watch, start: nil
 
   def start do
     watch(start: :erlang.now)
